@@ -1,25 +1,32 @@
 export const heroData = {
-  name: 'John Doe',
-  title: 'Full-Stack Developer',
-  description: 'I build scalable web applications and transform raw data into meaningful insights that drive business success.',
-  profilePicture: 'https://example.com/profilepic.jpg',
+  name: 'SHIM SEONGYONG : PORTFOLIO',
+  title: 'Back-End Developer',
+  description: '한국폴리텍IV대학 대전캠퍼스 스마트소프트웨어과 심성용입니다.',
+  profilePicture: 'profile_image.png',
   skills: [
+      'Spring',
+      'Spring Security',
+      'JPA',
+      '전자정부프레임워크',
+      'Oracle Database',
+      'PostgreSQL',
+      'MongoDB',
+      'Mybatis',
+      'Restful API',
+      'C++',
     'JavaScript',
+      'TypeScript',
+      'JQuery',
     'React',
     'Node.js',
     'SQL',
     'Python',
-    'Power BI',
-    'DAX',
-    'ETL',
-    'Data Modeling',
-    'API Development',
-    'Cloud Computing',
-    'Machine Learning'
+    'Git',
+      'Github'
   ],
   contact: {
-    github: 'https://github.com/johndoe',
-    linkedin: 'https://www.linkedin.com/in/johndoe/',
-    email: 'johndoe@example.com'
+    github: 'https://github.com/s2ydra',
+    linkedin: '.',
+    email: '993721@naver.com'
   }
 };

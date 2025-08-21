@@ -5,8 +5,8 @@ export interface Project {
   images: string[];
   tags: string[];
   details: {
-    challenge: string;
-    solution: string;
+    challenge: string[];
+    solution: string[];
     impact: string[];
   };
   externalLink?: {
@@ -17,17 +17,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Customer Insights Dashboard for E-Commerce",
-    summary: "Developed an interactive Power BI dashboard to analyze customer behavior, sales trends, and marketing performance for an e-commerce company.",
+    title: "영화 예매 사이트 - EATCH",
+    summary: "영화 티켓 예매 시, 먹거리 주문을 포함시켜 보다 편리한 영화관 이용을 돕는 사이트",
     images: [
-      "https://example.com/dashboard1.jpg",
-      "https://example.com/dashboard2.jpg",
-      "https://example.com/dashboard3.jpg"
+      "EATCH_main.png",
+      "EATCH_order.png"
     ],
-    tags: ["Power BI", "SQL", "Data Visualization", "Customer Analytics", "Business Intelligence"],
+    tags: ["Spring Legacy", "Oracle DB","SQL", "Vanila Javascript", "Mybatis", "JSP", "AJAX"],
     details: {
-      challenge: "The company lacked a centralized reporting system to track customer engagement, purchase patterns, and marketing campaign effectiveness.",
-      solution: "Designed and implemented a Power BI dashboard integrating data from Google Analytics, CRM systems, and sales records, providing real-time insights.",
+      challenge: ["하나의 영화티켓에 먹거리를 여러 종류 주문 시, 먹거리의 종류와 개수를 DB에 주문 데이터를 어떻게 저장할 것인가.",],
+      solution: ["영화 티켓에 담길 먹거리 주문 정보 테이블을 복합키 구조로 만들어, 기본키를 '먹거리 주문번호'와 '먹거리 종류'로 구성. 주문 정보 테이블에서는 영화 주문번호와 먹거리 주문번호만 외래키(FK)로 구성하였음.",],
       impact: [
         "Increased marketing ROI by 25% through data-driven campaign adjustments.",
         "Enhanced customer segmentation, leading to a 15% improvement in personalized recommendations and repeat purchases."
@@ -44,8 +43,8 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "ETL", "Data Engineering", "Finance", "Power BI", "Automation"],
     details: {
-      challenge: "The finance team spent excessive time manually aggregating and reconciling data from multiple sources for monthly reports.",
-      solution: "Developed a Python-based ETL pipeline that extracted, cleaned, and loaded financial data into Power BI, automating report generation.",
+      challenge: ["The finance team spent excessive time manually aggregating and reconciling data from multiple sources for monthly reports.",],
+      solution: ["Developed a Python-based ETL pipeline that extracted, cleaned, and loaded financial data into Power BI, automating report generation.",],
       impact: [
         "Reduced reporting time from 5 days to a few hours, improving efficiency.",
         "Minimized errors in financial reports, ensuring data accuracy for decision-making."

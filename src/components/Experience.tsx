@@ -21,20 +21,20 @@ export default function ExperienceSection() {
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>
-                      <CardTitle className="text-xl font-semibold">
+                      <CardTitle className="text-sm sm:text-xl font-semibold">
                         {job.title}
                       </CardTitle>
-                      <p className=" text-muted-foreground">
+                      <p className="text-sm sm:text-muted-foreground">
                         {job.company}
                       </p>
                     </div>
-                    <Badge variant="secondary">{job.dates}</Badge>
+                    <Badge className="whitespace-nowrap" variant="secondary">{job.dates}</Badge>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-inside list-disc space-y-1 text-muted-foreground">
                     {job.description.map((item, index) => (
-                      <li key={index}>{item}</li>
+                      <li className="text-xs sm:text-base" key={index}>{item}</li>
                     ))}
                   </ul>
                 </CardContent>

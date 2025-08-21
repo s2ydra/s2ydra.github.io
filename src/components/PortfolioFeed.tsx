@@ -39,7 +39,7 @@ const ProjectCarousel = ({ images }: { images: string[] }) => {
                   <img
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full"
                   />
                 </div>
               </div>
@@ -108,7 +108,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <h3 className="text-2xl font-bold">{project.title}</h3>
       </CardHeader>
       <CardContent className="space-y-6">
-        <ProjectCarousel images={project.images} />
+        <ProjectCarousel images={project.images}/>
 
         <div className="space-y-4">
           <p className="text-muted-foreground">{project.summary}</p>
@@ -128,13 +128,21 @@ const ProjectCard = ({ project }: { project: Project }) => {
           >
             <div className="rounded-lg bg-muted/50 p-4 space-y-4">
               <div>
-                <h4 className="font-semibold mb-2">Challenge</h4>
-                <p className="text-muted-foreground">{project.details.challenge}</p>
+                <h4 className="font-semibold mb-2">도전과제</h4>
+                  <ol className="list-decimal list-inside space-y-1 text-muted-foreground">
+                      {project.details.challenge.map((item, index) => (
+                          <li key={index}>{item}</li>
+                      ))}
+                  </ol>
               </div>
               
               <div>
-                <h4 className="font-semibold mb-2">Solution</h4>
-                <p className="text-muted-foreground">{project.details.solution}</p>
+                <h4 className="font-semibold mb-2">해결방법</h4>
+                  <ol className="list-decimal list-inside space-y-1 text-muted-foreground">
+                      {project.details.solution.map((item, index) => (
+                          <li key={index}>{item}</li>
+                      ))}
+                  </ol>
               </div>
               
               <div>
@@ -181,7 +189,7 @@ const PortfolioFeed = () => {
     <section className="relative z-10 min-h-screen bg-background/95 px-4 py-24 backdrop-blur-sm">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-12 text-center text-4xl font-bold tracking-tight">
-          Side Projects
+          프로젝트 경험
         </h2>
         
         <div className="space-y-8">

@@ -8,7 +8,7 @@ export const heroData = {
       'Spring Security',
       'JPA',
       '전자정부프레임워크',
-      'Oracle Database',
+      'Oracle DB',
       'PostgreSQL',
       'MongoDB',
       'Mybatis',

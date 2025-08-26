@@ -40,7 +40,7 @@ const Hero = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       const isDarkMode = document.documentElement.classList.contains('dark');
-      
+
       stars.current.forEach((star) => {
         star.y += star.speed;
         if (star.y > canvas.height) {

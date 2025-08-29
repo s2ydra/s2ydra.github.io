@@ -9,6 +9,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
+  GitCompareArrows,
   Users,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -140,6 +141,23 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
               <span>{project.info.period}</span>
             </div>
+
+            {project.info.role ? (
+              <div className='flex gap-8'>
+                <div className='flex align-middle gap-2'>
+                  <GitCompareArrows className='max-w-5' />
+                  <span className='text-base whitespace-nowrap'>역할 :</span>
+                </div>
+                <ul className='list-decimal'>
+                  {project.info.role?.map((item, index) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <></>
+            )}
+
             <div className='flex gap-7'>
               <div className='flex align-middle gap-2'>
                 <Award className='max-w-5' />

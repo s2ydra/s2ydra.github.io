@@ -6,7 +6,7 @@ export interface Project {
     people: string
     period: string
     result: string[]
-    role?: string
+    role?: string[]
   }
   summary: string
   images: string[]
@@ -76,7 +76,11 @@ export const projects: Project[] = [
         'React + Typescript 를 활용한 프론트앤드 개발을 통해, SPA의 전반적인 개념과 컴포넌트 기반 개발의 경험을 쌓음',
         'Docker를 활용하여 서버에 배포 (http://oxiom.myodan.me)',
       ],
-      role: '기획 / 설계, Back-end(비즈니스 로직 설계/작성), Front-end(경매 페이지, 경매 관련 기록 페이지 퍼블리싱)',
+      role: [
+        '기획 / 설계',
+        'Back-end(비즈니스 로직 설계/작성)',
+        'Front-end(경매 페이지, 경매 관련 기록 페이지 퍼블리싱)',
+      ],
     },
     summary:
       "'중고거래 + 경매 시스템' 을 통해 판매/구매자 간의 갈등을 해소하며, 보다 더 합리적인 가격으로 거래를 할 수 있는 사이트 ",

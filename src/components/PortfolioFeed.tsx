@@ -121,7 +121,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <li key={index}>{item.text}</li>
           ))} */}
             <span className='font-bold text-3xl'>
-              {project.name} - 영화 예매 사이트
+              {project.name} - {project.title}
             </span>
             <p className='text-base font-bold'>{project.summary}</p>
           </div>
@@ -143,7 +143,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <div className='flex gap-7'>
               <div className='flex align-middle gap-2'>
                 <Award className='max-w-5' />
-                <span className='text-base'>프로젝트 성과 : </span>{' '}
+                <span className='text-base whitespace-nowrap'>
+                  프로젝트 성과 :{' '}
+                </span>{' '}
               </div>
               <div>
                 <ul className='list-decimal'>
@@ -177,7 +179,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 </ul>
               </div>
               <div>
-                <h4 className='font-semibold mb-2'>도전과제</h4>
+                <h4 className='font-semibold mb-2'>진행 중 문제점</h4>
                 <ol className='list-decimal list-inside space-y-1 text-muted-foreground'>
                   {project.details.challenge.map((item, index) => (
                     <li key={index}>{item}</li>

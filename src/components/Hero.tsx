@@ -124,7 +124,7 @@ const Hero = () => {
         <p className='mb-6 text-xl text-muted-foreground sm:text-2xl'>
           {heroData.title}
         </p>
-        <p className='mb-5 max-w-2xl sm:text-lg font-bold'>
+        <p className='mb-5 max-w-2xl whitespace-nowrap text-sm sm:text-lg font-bold'>
           {heroData.description}
         </p>
         <div className='flex gap-2 mb-7'>

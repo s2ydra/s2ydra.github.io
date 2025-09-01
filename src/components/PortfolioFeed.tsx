@@ -121,10 +121,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {/* {project.summary.map((item, index) => (
           <li key={index}>{item.text}</li>
           ))} */}
-            <span className='font-bold text-3xl'>
+            <span className='font-bold text-2xl sm:text-3xl'>
               {project.name} - {project.title}
             </span>
-            <p className='text-base font-bold'>{project.summary}</p>
+            <p className='text-sm sm:text-base font-bold'>{project.summary}</p>
           </div>
           <div className='flex flex-col gap-2 align-center justify-center'>
             <div className='flex gap-2 align-middle'>
@@ -150,7 +150,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 </div>
                 <ul className='list-decimal'>
                   {project.info.role?.map((item, index) => (
-                    <li>{item}</li>
+                    <li className='text-sm sm:text-lg'>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -158,17 +158,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <></>
             )}
 
-            <div className='flex gap-7'>
+            <div className='flex flex-col gap-1 sm:flex-row sm:gap-7'>
               <div className='flex align-middle gap-2'>
                 <Award className='max-w-5' />
                 <span className='text-base whitespace-nowrap'>
                   프로젝트 성과 :{' '}
-                </span>{' '}
+                </span>
               </div>
               <div>
-                <ul className='list-decimal'>
+                <ul className='list-decimal ml-5'>
                   {project.info.result.map((item, index) => (
-                    <li className='text-base'>{item}</li>
+                    <li className='text-sm sm:text-base'>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -190,7 +190,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <div className='rounded-lg bg-muted/50 p-4 space-y-4'>
               <div>
                 <h4 className='font-semibold mb-2'>주요기능</h4>
-                <ul className='list-disc list-inside space-y-1 text-muted-foreground'>
+                <ul className='list-disc list-inside space-y-1 text-sm sm:text-muted-foreground'>
                   {project.details.impact.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
@@ -198,7 +198,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
               <div>
                 <h4 className='font-semibold mb-2'>진행 중 문제점</h4>
-                <ol className='list-decimal list-inside space-y-1 text-muted-foreground'>
+                <ol className='list-decimal list-inside space-y-1 text-sm sm:text-muted-foreground'>
                   {project.details.challenge.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
@@ -207,7 +207,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
               <div>
                 <h4 className='font-semibold mb-2'>해결방법</h4>
-                <ol className='list-decimal list-inside space-y-1 text-muted-foreground'>
+                <ol className='list-decimal list-inside space-y-1 text-sm sm:text-muted-foreground'>
                   {project.details.solution.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}

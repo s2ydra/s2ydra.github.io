@@ -1,40 +1,44 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { jobs } from '@/data/experienceData';
+import React from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { jobs } from '@/data/experienceData'
 
 const TimelineDot = () => (
-  <div className="absolute left-0 w-3 h-3 bg-primary rounded-full mt-8 -ml-1.5 border border-white dark:border-gray-900" />
-);
+  <div className='absolute left-0 w-3 h-3 bg-primary rounded-full mt-8 -ml-1.5 border border-white dark:border-gray-900' />
+)
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">My History</h2>
-        <div className="relative border-l border-gray-200 dark:border-gray-700 ml-3">
+    <section className='bg-background'>
+      <div className='container mx-auto px-4'>
+        <h2 className='text-3xl font-bold mb-8 text-center'>My History</h2>
+        <div className='relative border-l border-gray-200 dark:border-gray-700 ml-3'>
           {jobs.map((job, index) => (
-            <div key={index} className="mb-8 ml-6">
+            <div key={index} className='mb-8 ml-6'>
               <TimelineDot />
-              <Card className="mb-4">
+              <Card className='mb-4'>
                 <CardHeader>
-                  <div className="flex justify-between items-start">
+                  <div className='flex justify-between items-start'>
                     <div>
-                      <CardTitle className="text-sm sm:text-xl font-semibold">
+                      <CardTitle className='text-sm sm:text-xl font-semibold'>
                         {job.title}
                       </CardTitle>
-                      <p className="text-sm sm:text-muted-foreground">
-                        {job.company}
+                      <p className='text-xs sm:text-muted-foreground'>
+                        {job.summary}
                       </p>
                     </div>
-                    <Badge className="whitespace-nowrap" variant="secondary">{job.dates}</Badge>
+                    <Badge className='whitespace-nowrap' variant='secondary'>
+                      {job.dates}
+                    </Badge>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="list-inside list-disc space-y-1 text-muted-foreground">
+                  <ul className='list-inside list-disc space-y-1 text-muted-foreground'>
                     {job.description.map((item, index) => (
-                      <li className="text-xs sm:text-base" key={index}>{item}</li>
+                      <li className='text-xs sm:text-base' key={index}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </CardContent>
@@ -44,5 +48,5 @@ export default function ExperienceSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -69,7 +69,7 @@ export const projects: Project[] = [
     name: 'OXIOM',
     info: {
       people: '4인',
-      period: '2025-04 ~ 2024.06',
+      period: '2025-04 ~ 2025.06',
       result: [
         'Spring Security + JWT 를 활용하여 보안성을 강화',
         'WebSocket을 활용하여 실시간 데이터 송수신(경매금액 변동에 활용)',
